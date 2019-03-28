@@ -10,9 +10,12 @@ var chatArea=$("#chatArea") ;
 
 //emit and receive event
 sendMessage.click((event) => {
+    
     socket.emit('newMessage',{message:message.val()});
+    message.val("")
 })
 socket.on('newMessage',(data)=>{
+    
     chatArea.append("<div class='displayDiv'><p class='userNameDisplay'>"+data.username+"</p>"+"<p class='messageDisplay'>"+data.message+"</p></div>")
 })
 
