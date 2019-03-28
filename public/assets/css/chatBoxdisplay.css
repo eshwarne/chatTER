@@ -1,0 +1,25 @@
+
+
+#chatArea{
+    
+    padding: 0px !important;
+    padding-left:40px !important;
+}
+#chatArea{
+    background-color: rgb(235, 235, 235)
+}
+.displayDiv{
+    width:1000px;
+    margin:5px;
+    padding-bottom:5px;
+    background-color: rgb(233, 233, 233)
+}
+.userNameDisplay{
+    margin:0px !important;
+    padding-left:10px;
+    font-weight: bold;
+}
+.messageDisplay{
+    margin:0px !important;
+    padding-left:15px;
+}

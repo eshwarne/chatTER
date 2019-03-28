@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>CHAT Application</title>
+        <link rel="stylesheet" href="/assets/css/chatBoxDisplay.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        
+        <div class="container" style="padding:5rem">
+                <div class="form-group mx-sm-3 mb-2">
+                        <label for="inputPassword2" class="sr-only">Username:</label>
+                        <input type="text" class="form-control" id="username" placeholder="set a username!" name="username">
+                        <br>
+                        <button type="submit" id="sendUsername"class="btn btn-primary mb-2">Change Username</button>
+                      </div>
+            
+                    <div class="form-group mb-2">
+                      <label for="staticEmail2" class="sr-only">Message:</label>
+                      <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="     Message :">
+                    </div>
+                    <div class="form-group mx-sm-3 mb-2">
+                      <label for="inputPassword2" class="sr-only">Password</label>
+                      <input type="text" class="form-control" id="message" placeholder="hey! what's up?" name="message">
+                      <br>
+                      <button type="submit" id="sendMessage" class="btn btn-primary mb-2">Send</button>
+                    </div>
+                    
+                    
+              
+                </div>
+            <div id="chatArea">
+                <h3>Textopedia</h3>
+            </div>
+            <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+            <script src="chat.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.0/socket.io.js"></script>   
+       
+    </body>
+</html>
