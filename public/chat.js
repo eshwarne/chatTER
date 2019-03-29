@@ -1,14 +1,18 @@
 $(function(){
-let socket = io.connect('http://localhost:3000',{transports: ['websocket']});
+let socket = io.connect('http://192.168.43.13:3000',{transports: ['websocket']});
 let message = $("#message");
 let sendMessage = $("#sendMessage");
 let username = $("#username");
 let sendUsername = $("#sendUsername");
 var chatArea=$("#chatArea") ;
+let userCountDisplay = $("#userCountDisplay")
 
-//emitting in sockets
+// emitting in sockets
 
-//emit and receive event
+// emit and receive event
+socket.on('newUser',(data)=>{
+    userCountDisplay.html(data.count);
+})
 sendMessage.click((event) => {
     
     socket.emit('newMessage',{message:message.val()});
